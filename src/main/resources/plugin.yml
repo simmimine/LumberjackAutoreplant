@@ -1,0 +1,7 @@
+name: LumberjackReplant
+version: ${project.version}
+main: me.simmimine.lumberjackreplant.LumberjackReplant
+api-version: 1.16
+authors: [simmimine]
+description: Lumberjack autoreplant of saplings when bottom log broken
+website: www.github.com/simmimine
