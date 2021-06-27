@@ -1,5 +1,6 @@
 package me.simmimine.lumberjackreplant;
 
+import org.bukkit.command.PluginCommand;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -14,7 +15,9 @@ public final class LumberjackReplant extends JavaPlugin {
         instance = this;
 
         PluginManager pluginManager = getServer().getPluginManager();
-        pluginManager.registerEvents(new BreakListener(), this);
+        pluginManager.registerEvents(new BreakListener(this), this);
+        PluginCommand command = getCommand("lumberjackreplant");
+        command.setExecutor(new ReplantCommand(this));
     }
 
     @Override
