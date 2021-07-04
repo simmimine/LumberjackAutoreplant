@@ -31,14 +31,14 @@ public class BreakListener implements Listener {
         if (configChecker(event.getPlayer().getUniqueId())) {
             if (plugin.getConfig().get(event.getPlayer().getUniqueId().toString()).equals(true)){
                 Location loc = event.getBlock().getLocation();
-                if (event.getPlayer().hasPermission("lumberjack.replant")) ;{
-                if (treeChecker(loc)) {
-                    if (event.getPlayer().getInventory().contains(saplingTypes.get(logTypes.indexOf(event.getBlock().getType())))) {
-                        loc.setY(event.getBlock().getY());
-                        saplingReplanter(loc, saplingTypes.get(logTypes.indexOf(event.getBlock().getType())));
-                        saplingRemover(event.getPlayer(), event);
+                if (event.getPlayer().hasPermission("lumberjack.replant")) {
+                    if (treeChecker(loc)) {
+                        if (event.getPlayer().getInventory().contains(saplingTypes.get(logTypes.indexOf(event.getBlock().getType())))) {
+                            loc.setY(event.getBlock().getY());
+                            saplingReplanter(loc, saplingTypes.get(logTypes.indexOf(event.getBlock().getType())));
+                            saplingRemover(event.getPlayer(), event);
+                        }
                     }
-                }
                 }
             }
         }
