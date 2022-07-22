@@ -1,5 +1,5 @@
 # LumberjackAutoreplant
-Lumberjack autoreplant for minecraft 1.16.5
+Lumberjack autoreplant for minecraft 1.16.5+
 
 ©,2021,simmimine
 
